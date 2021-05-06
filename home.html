@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f072e4021a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><i class="fas fa-home"></i><a href="#"> HOME</a></li>
+                <li><i class="fab fa-google-play"></i><a href="#"> PLAYLIST</a></li>
+                <li><i class="fas fa-images"></i><a href="#"> ALBUMS</a></li>
+                <li><i class="fas fa-podcast"></i><a href="#"> PODCAST</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE <br>REAL <br> SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="play.png" id="icon">
+            </div>
+        </div>
+
+    </div>
+    <audio id="mysong">
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var mysong= document.getElementById("mysong")
+        var icon= document.getElementById("icon")
+
+        icon.onclick=function() {
+            if (mysong.paused){
+                mysong.play();
+                icon.src="pause.png";
+
+            } else{
+                mysong.pause();
+                icon.src="play.png";
+            }
+        }
+
+    </script>
+
+
+</boddy>
+</html>
